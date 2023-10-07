@@ -12,8 +12,14 @@ public class Calculator {
 
         System.out.print("The number is: " + num);
 
+        itsNotAmain();
+
     }
 
+    public static void itsNotAmain(){
 
+        System.out.print("\nAnother Main o_o");
+
+    }
 
 }
