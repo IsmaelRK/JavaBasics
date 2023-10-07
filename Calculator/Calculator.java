@@ -1,4 +1,5 @@
 package Calculator;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Calculator {
@@ -6,19 +7,19 @@ public class Calculator {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        int[] num = new int[2];
+        ArrayList<Integer> numbers = new ArrayList<>();
 
+        int num;
 
 
         for (int i = 0; i < 2; i++)
         {
             System.out.print("\nEnter With a Number: ");
-            num[i] = scan.nextInt();
-
+            num = scan.nextInt();
+            numbers.add(num);
         }
 
 
-        System.out.print("\nThe numbers are: " + num[0] + "And" + num[1]);
 
         int opt;
         System.out.print("\n[1] Sum");
@@ -26,28 +27,38 @@ public class Calculator {
         System.out.print("\nEnter the Option: ");
         opt = scan.nextInt();
 
-        int response = calc(opt, num[0], num[1]);
-        System.out.print("\nYour Result: " + response);
+        int response = calc(opt, numbers);
+
+        if (response != Integer.MIN_VALUE)
+        {
+            System.out.print("\nYour Result: " + response);
+        }
 
         scan.close();
 
     }
 
-    public static int calc(int opt, int n, int n2){
+    public static int calc(int opt, ArrayList<Integer> nums){
+
+        int result;
 
         if (opt == 1)
         {
-            return n + n2;
+            result = nums.get(0) + nums.get(1);
         }
 
         else if (opt == 2)
         {
-            return n - n2;
+            result = nums.get(0) - nums.get(1);
+        }
+        else
+        {
+            System.out.println("Invalid Option!");
+            result = Integer.MIN_VALUE;
         }
 
 
-        System.out.print("\nSomething Went Wrong!");
-        return 0;
+        return result;
     }
 
 }
