@@ -29,6 +29,8 @@ public class Calculator {
         int response = calc(opt, num[0], num[1]);
         System.out.print("\nYour Result: " + response);
 
+        scan.close();
+
     }
 
     public static int calc(int opt, int n, int n2){
