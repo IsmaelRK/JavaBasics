@@ -1,6 +1,9 @@
 package Learning;
 
 import java.util.Date;
+import java.util.Locale;
+
+import java
 
 public class fundamentos {
 
@@ -17,13 +20,22 @@ public class fundamentos {
         System.out.println(falso);
 
         time();
+        locale();
     }
 
     public static void time() {
 
         Date data = new Date();
-        System.out.println(data.toString());
+        System.out.println("Its -> " + data.toString());
 
+    }
+
+    public static void locale() {
+        Locale deafult = Locale.getDefault();
+        System.out.println("Sys Langauge -> " + deafult);
+
+        String lang = deafult.getLanguage();
+        System.out.println("Sys Langauge -> " + lang);
     }
 
 
