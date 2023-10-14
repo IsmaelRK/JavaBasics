@@ -1,6 +1,8 @@
 package Learning;
 
-public class Fundamentos {
+import java.util.Date;
+
+public class fundamentos {
 
 
 
@@ -13,6 +15,17 @@ public class Fundamentos {
 
         System.out.println(inteiro);
         System.out.println(falso);
+
+        time();
     }
+
+    public static void time() {
+
+        Date data = new Date();
+        System.out.println(data.toString());
+
+    }
+
+
 
 }
