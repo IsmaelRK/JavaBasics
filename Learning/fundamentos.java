@@ -3,7 +3,8 @@ package Learning;
 import java.util.Date;
 import java.util.Locale;
 
-import java
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 public class fundamentos {
 
@@ -21,6 +22,7 @@ public class fundamentos {
 
         time();
         locale();
+        screen();
     }
 
     public static void time() {
@@ -38,6 +40,11 @@ public class fundamentos {
         System.out.println("Sys Langauge -> " + lang);
     }
 
+    public static void screen() {
 
+        Dimension scrSize = Toolkit.getDefaultToolkit().getScreenSize();
+        System.out.println("Resolution -> " + scrSize.width + "X"  + scrSize.height);
+
+    }
 
 }
