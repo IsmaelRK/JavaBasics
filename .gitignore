@@ -1,2 +1,3 @@
 
 *.xml
+/JavaFX/myfx/target/
